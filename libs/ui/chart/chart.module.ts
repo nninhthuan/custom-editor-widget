@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { ChartComponent } from './chart.component';
+import { ChartPlotlyJSComponent } from './chart-plotly-js/chart-plotly-js.component';
 
 
 @NgModule({
   declarations: [
-    ChartComponent
+    ChartComponent,
+    ChartPlotlyJSComponent,
   ],
   imports: [],
-  providers: [
-    provideClientHydration()
-  ],
-  bootstrap: []
+  exports: [ChartComponent]
 })
 export class ChartModule { }
